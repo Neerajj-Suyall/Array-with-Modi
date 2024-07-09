@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <div>
+      <input type="text" id="value1" readonly >
+      <input type="text" id="value2" readonly >
+      <input type="text" id="value3" readonly>
+      <button id="button"> merge array </button>
+   </div>
+
+   <Script>
+      // merge two array in third array
+
+      let value1 = document.getElementById("value1")
+      let value2 = document.getElementById("value2")
+      let value3 = document.getElementById("value3")
+      let button = document.getElementById("button")
+      let arr1 = [1,2,3,4,5,6]
+      let arr2 = [0,9,8,7,6,5,4,3,2]
+      let arr3 = []
+      value1.value = arr1
+      value2.value = arr2
+      
+      function merge(e) {
+        
+         for (let i = 0; i < arr1.length; i++) {
+            arr3[i] =arr1[i] 
+            
+         }
+         for (let i = 0; i < arr2.length; i++) {
+            arr3[arr3.length] =arr2[i] 
+            
+         }
+         
+         value3.value = arr3
+         
+      }
+
+      button.addEventListener("click", merge)
+   </Script>
+</body>
+</html>

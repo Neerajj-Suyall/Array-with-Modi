@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>insetion sort</title>
+</head>
+<body>
+
+   <script>
+      let abc = [9,8,7,6,5,4,3,2,1];
+      let ndx;
+      let low;
+      
+      console.log(abc);
+      for (let i = 1; i < abc.length; i++) {
+         low = abc[i]
+         ndx = null;
+         for (let j = i; j >= 0; j--) {
+            if (low < abc[j] ) {
+                abc[j+1]  = abc [j]   // swap next step 
+                ndx = j
+            console.log(j);
+
+            }
+
+         }
+         
+         if (ndx != null) {
+            abc[ndx] = low             // remaining value in a temp 
+         }
+         
+         
+         
+      }
+      console.log(abc);
+
+   </script>
+
+   <!-- <script>
+      let abc = [9,8,7,6,5,4,3,2,1];
+      let ndx;
+      let low;
+      
+      console.log(abc);
+      for (let i = 1; i < abc.length; i++) {
+         low = abc[i]
+         ndx = null;
+         for (let j = i; j >= 0; j--) {
+            if (low < abc[j] ) {
+                ndx = j
+            }
+         }
+
+         for (let k = ndx; k <= i; k++) {
+            abc[k+1] = abc[k];
+         }
+
+
+         
+         if (ndx == null) {
+            
+         }
+         abc[ndx ] = low
+         
+         
+      }
+      console.log(abc);
+
+   </script> -->
+   
+</body>
+</html>

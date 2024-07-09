@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Reverse in my mind</title>
+</head>
+<body>
+   <script>
+
+      // reverse an array in single array
+      
+      let abc = [0,9,8,7,6,5,4,3,2,1];
+      let org = abc.length
+      // abc.length = (abc.length - 1 )*2
+       let temp ;
+     
+
+       console.log(abc);
+
+      for (let i = 0; i < org ; i++) {
+         abc[org + i] = abc[(org -1) -i]
+
+         
+      }
+      
+      for (let j = 0; j < org; j++) {
+         abc[j] = abc[org+j]
+         
+      }
+      abc.length = org
+      console.log(abc);
+   </script>
+</body>
+</html>

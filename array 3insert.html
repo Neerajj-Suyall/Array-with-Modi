@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>Array insert</title>
+</head>
+<body>
+   <div>
+      <input type="text" id="arry" readonly >
+      <input type="text" id="input1" placeholder="select value">
+
+      <input type="number" id="input2" placeholder="Select index">
+      
+      <button id="button1">Enter</button>
+   </div>
+
+   <!-- <script> // ok 
+      
+      var button = document.getElementById("button1");
+      // let val = 999;
+      // let num = 3;
+      // console.log(Data);
+
+      // for( let a=10; a > 1; a--){
+      //    console.log(a);
+      // }
+      let Data =[1,2,3,4,5,6,7,8,9];
+
+     function insert(){
+      var val = document.getElementById("input1").value;
+      var num =  document.getElementById("input2").value;
+
+      for(let i = Data.length-1 ; i >= 0; i--){
+         if(i >= num){
+           
+         //   console.log(Data[i]);
+
+            
+            Data[i+1] = Data[i];
+            
+            if(i == num){
+                Data[i] = parseInt(val);
+               // console.log(val);
+            }
+         }
+         // console.log(Data);
+        
+      }
+
+
+      console.log(Data);
+     }
+   button.addEventListener("click", insert)
+   </script> -->
+
+   <script>
+      let temp = [1,2,3,4,5,6,7,8,9,0];
+      let input1 = document.getElementById("input1");
+      let input2 = document.getElementById("input2"); 
+      let button1 = document.getElementById("button1"); 
+      let arry = document.getElementById("arry")
+      arry.value = temp;
+
+      function addValue(e) {
+         
+         for (let i = temp.length; i =>0; i--) {  // add an value in certain index 
+            
+            temp[i]= temp[i-1]
+            if (input2.value == i) {
+               temp[i] = input1.value
+               arry.value = temp
+                console.log(arry.value);
+               return
+            }
+            // console.log(arry.value);
+            
+         }
+         
+      }
+
+
+      button1.addEventListener("click", addValue)
+   </script>
+</body>
+</html>

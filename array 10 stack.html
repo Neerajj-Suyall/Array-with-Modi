@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Stack</title>
+</head>
+<body>
+   <h1>
+      check console 
+      push = 1,2,3,4,5,6,7,8,9,0
+      and 
+      max  = 5
+      pop  
+   </h1>
+   
+   <script>
+      // making a stack dummy model
+      let maxLength = 5
+      let stack = []
+      let i = 0
+
+      function stackPush(e) {
+         
+         if (maxLength >= i) {
+            stack[i] = e ;
+            i++
+         } else  {
+            return
+         }
+         
+      }
+
+      stackPush(1);
+      stackPush(2);
+      stackPush(3);
+      stackPush(4);
+      stackPush(5);
+      stackPush(6);
+      stackPush(7);
+      stackPush(8);
+      stackPush(9);
+      stackPush(0);
+      console.log(stack);
+   </script>
+</body>
+</html>

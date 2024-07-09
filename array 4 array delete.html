@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>Array Delete </title>
+</head>
+<body>
+      <input type="text" id="new" readonly>
+      <input type="text" id="value1" placeholder="enter array index(0-9)">
+      <button id="button1"> Enter</button>
+
+   <!-- <Script>
+      var val = document.getElementById("value1");
+      var operation = document.getElementById("button1");
+         var D = parseInt(val.value);
+
+      A =[2,3,4,5,6,7,8,9,1,0 ];
+
+
+      console.log(`old array is ${A}`)
+
+      function remove(event){
+          
+        if(D < A.length){
+         for(let i=D; i<A.length; i++){
+            A[i]=A[i+1];
+         }
+         A.length =A.length-1;
+         console.log(`new array is ${A}`)
+        }
+        else {
+         alert(`wrong input
+Array index is ${A.length-1} `)
+        }
+      }
+      
+      operation.addEventListener("click", remove)
+   </Script> -->
+
+   <script>
+      let data = document.getElementById("new")
+      let value1 = document.getElementById("value1")
+      let button1 = document.getElementById("button1")
+      let abc =[2,3,4,5,6,7,8,9,1,0 ]
+      data.value = abc
+      
+      function operation(e) {
+         if (abc.length -1 >= value1.value && value1.value >=0 ) { // delete a value in certain index
+            for (let i = 0; i < abc.length-1; i++) {
+               
+               if (i >= value1.value) {
+                  abc[i] = abc[i+1];
+               }
+              
+            }
+
+            abc.pop()
+            data.value = abc
+         } 
+      }
+
+      button1.addEventListener('click', operation)
+   </script>
+</body>
+</html>

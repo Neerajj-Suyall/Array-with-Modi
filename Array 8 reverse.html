@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>reverse array</title>
+</head>
+<body>
+   <div>
+      <input type="text" readonly>
+      <input type="text" readonly>
+      <button>Enter</button>
+   </div>
+   <script>
+      // reverse a single array 
+      let input = document.getElementsByTagName('input')
+      let button = document.getElementsByTagName('button')
+      let arry = [9,8,7,6,6,5,66,4,3,3,2,1,0]
+      let temp ;
+      input[0].value = arry
+
+      function revese(e) { 
+         for (let i = 0; i < (arry.length/2); i++) {
+            temp = arry[i]
+            arry[i] = arry[(arry.length-1) - i]
+            arry[(arry.length-1) - i] = temp
+           
+         }
+         input[1].value = arry
+      }
+
+      button[0].addEventListener('click', revese)
+   </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>money list</title>
+</head>
+<body>
+   <div>
+      <input type="number" >
+      <input type="text" style=" max-width: 300px;" readonly>
+      <button> Check</button>
+   </div>
+
+   <Script>
+      let input = document.getElementsByTagName("input")
+      let button = document.getElementsByTagName("button")
+      let temp;
+      let price = 10;
+      let product = 0;
+
+      function list(e) {
+         temp = parseInt(input[0].value) 
+         if (temp >= price) {
+            temp =  temp-price
+            input[0].value = temp
+            product++;
+            list()
+         } else{
+            input[1].value = ` balance ${temp} rupees buy ${product} product`
+            return
+         }
+      }
+
+
+      button[0].addEventListener("click" , list)
+   </Script>
+</body>
+</html>

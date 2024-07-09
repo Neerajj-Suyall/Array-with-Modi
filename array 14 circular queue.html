@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>circular Queue</title>
+</head>
+<body>
+   <div>
+      <textarea  cols="2" rows="15"></textarea>
+      <input type="number" placeholder="range">
+      <input type="number" placeholder="add value">
+       
+      <button> Add</button>
+      <button> Remove</button>
+      
+   </div>
+   <script>
+      // let range = 5
+      let abc = [];
+      let textarea = document.getElementsByTagName("textarea")[0];
+      let range = document.getElementsByTagName("input")[0];
+      let inputValue = document.getElementsByTagName("input")[1];
+      let Add = document.getElementsByTagName("button")[0];
+      let Remove = document.getElementsByTagName("button")[1];
+
+     function AddValue(e) {
+       for (let i = 0; i < abc.length; i++) {
+          abc[i] = parseInt(inputValue.value)
+          
+       }
+       textarea.value = abc
+     }
+
+     function RemoveValue(e) {
+      
+     }
+
+     Add.addEventListener("click" , AddValue)
+     Remove.addEventListener("click" , RemoveValue)
+   </script>
+</body>
+</html>

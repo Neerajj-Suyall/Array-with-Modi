@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Selection sort</title>
+</head>
+
+<body>
+   <script>
+      let abc = [ 12 , 13 , 52 , 53 , 75 , 94 , 65 , 84 , 37 , 59]
+      let high;
+      let low;
+      let ndx;
+
+      console.log(abc);
+
+      for (let i = 0; i < abc.length; i++) {
+         high = abc[i]
+         low = abc[i]
+         for (let j = i+1; j < abc.length; j++) {
+
+            if (low > abc[j]) {
+               low = abc[j]
+               ndx = j
+            }
+         }
+
+         if (ndx == null) {         /// important
+            continue                /// important
+         }
+
+         abc[i] = low
+         abc[ndx] = high
+      
+         ndx= null;                 /// important
+
+      }
+      console.log(abc);
+   </script>
+</body>
+
+</html>

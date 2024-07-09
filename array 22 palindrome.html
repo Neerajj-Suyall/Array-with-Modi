@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>palindrome my logic</title>
+</head>
+<body>
+   <Script>
+      let abc = "llevell"
+      let condition = "yes it is palendrome"
+      for (let i = 0; i < Math.floor(abc.length /2); i++) {
+         if (abc[i] == abc[(abc.length -1) -i]) {
+            continue
+         }
+         condition = " it's not palendrome"
+      }
+
+      console.log(condition);
+   </Script>
+   
+</body>
+</html>

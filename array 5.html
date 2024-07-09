@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>value search </title>
+</head>
+<body>
+   // search a value in array
+   <input type="text" id="input1"  placeholder="search value 2,3,4,5,6,7,8,9,1,0" readonly>
+   <Button id="button1">Enter</Button>
+   <script>
+      var val = document.getElementById("input1");
+      var operation = document.getElementById("button1");
+      var S = parseInt(val.value);
+       A =[2,3,4,5,6,7,8,9,1,0];
+
+      function find(){
+         for(var i =0; i<A.length; i++){
+          if (S==A[i]){
+            console.log(i)
+            alert(i)
+          }
+          
+       }
+      }
+       operation.addEventListener("click", find)
+       
+   </script>
+   
+</body>
+</html>

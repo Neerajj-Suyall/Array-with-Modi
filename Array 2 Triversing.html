@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <title>Array Print
+      </title>
+</head>
+<body>
+   <input type="text" id="input1">
+   <button id="button1">Enter</button>
+
+   <Script>
+     
+      function operation(){    
+      let A =[9,8,8,7,6,54,3,2,1,2];
+
+      // for(let i=0; i<A.length; i++){
+         // console.log(A[i]);
+         // alert(A[i]);
+      // }
+      var v = document.getElementById("input1").value;
+          if(v < A.length && v >= 0)
+          console.log(A[v]);
+          alert(A[v]);
+      }
+
+      
+      document.getElementById("button1").addEventListener("click", operation)
+   </Script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   
+   <script>
+      //10 987654321
+      let abc =[0,9,8,7,6,5,4,3,2,1]
+      let high;
+      let low;
+      let index;
+       
+      console.log(abc);
+      for (let i = 0; i < abc.length; i++) {
+         let high = abc[i];
+         index = null;
+         for (let j = i+1; j < abc.length; j++) {
+
+            if (high < abc[j]) {
+               high = abc[j]
+               index = j
+            }
+    
+         }
+         
+         if (index == null ) {
+               continue
+            }
+         abc[index] = abc[i];
+            abc[i] = high;
+      }
+      console.log(abc);
+   </script>
+</body>
+</html>

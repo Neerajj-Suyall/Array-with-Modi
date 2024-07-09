@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <div>
+      <input type="number">
+      <input type="number" readonly>
+      <button>Enter</button>
+   </div>
+
+   <script>
+      // factorial of a input number
+      let input = document.getElementsByTagName("input")
+      let button = document.getElementsByTagName("button")
+      let store = 1;
+      let prev = 1;
+
+      function factorial(e) {
+         let temp = parseInt(input[0].value)
+         input[0].value;
+          for (let i = 0; i < temp; i++) {
+           store = temp-i;
+            prev = store * prev;
+            input[1].value = prev;
+          }
+          
+          prev= 1;
+      }
+
+
+      button[0].addEventListener("click", factorial)
+   </script>
+</body>
+</html>

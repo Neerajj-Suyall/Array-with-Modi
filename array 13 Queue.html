@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <h1>
+      Queue
+   </h1>
+
+   <Script>
+      let abc = [9,6,4,3]
+      
+      function addValue(event) {
+         let temp = abc.length;
+         for (let i = temp; i >= 0; i--) {
+            abc[i] = abc[i-1];
+           
+         }
+         abc[0] = event
+         console.log(abc);
+      }
+
+      function RemoveValue() {
+         let temp = abc.length;
+        for (let i = 0; i < temp; i++) {
+         abc[i] = abc[i+1]
+         
+        }
+        abc.length = abc.length -1
+      }
+
+
+
+      addValue(20);
+      RemoveValue()
+      // addValue(20)
+      console.log(abc);
+   </Script>
+</body>
+</html>

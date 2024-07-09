@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>merge array</title>
+</head>
+<body>
+   <input type="text" placeholder="0,1,2,3,4,5,6,7,8,9" readonly>
+   <input type="text" placeholder="2,3,4,5,6,7,8,9,1,0" readonly>
+   <button id="button1">Add Array</button>
+  
+  
+  <Script>
+      var operation = document.getElementById("button1");
+      operation.addEventListener("click", findv)
+
+
+      A1 =[0,1,2,3,4,5,6,7,8,9];
+      A2 =[2,3,4,5,6,7,8,9,1,0];
+      m=[]
+
+      function findv(){
+         for(var i=0; i<A1.length; i++){
+            m[i]=A1[i];
+         }
+
+         for(var i=0; i<A2.length; i++){
+            m[m.length]=A2[i];
+         }
+         console.log(m)
+          alert(m)
+     }
+      operation.addEventListener("click", findv)
+    
+    </Script>
+   
+</body>
+</html>

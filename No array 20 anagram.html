@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>anagram same to same</title>
+</head>
+<body>
+   <Script>
+      // not working
+      let abc  = "hello"
+      let xyz = "hello"
+
+     let test ={}
+     let test2 = {}
+        
+      for(let i = 0; i < abc.length; i++) {
+        console.log(test);
+ 
+         if (abc.length != xyz.length) {
+            break;
+         } 
+         let temp = abc[i]
+         let temp2 = xyz[i]
+         if (test[temp]) {
+            test[temp] += 1;
+            continue;
+         }
+
+
+         test[temp] = 1
+
+      }
+      
+      if (test.length == 0) {
+         console.log("yes it is anagram");
+      } else {
+         console.log(test);
+      }
+   </Script>
+   
+</body>
+</html>

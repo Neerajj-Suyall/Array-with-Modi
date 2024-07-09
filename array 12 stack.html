@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>stack working in click</title>
+</head>
+<body>
+   <div>
+      <textarea readonly></textarea>
+      <input type="text">
+      <div style="display: flex; flex-direction: row;">
+         <button style="background-color: greenyellow;">Push</button>
+      
+         <button style="background-color: tomato;">Pop</button>
+      </div>
+   </div>
+   <Script>
+
+      // add and delete the value in a stack
+      // stack is like a jar
+      let input = document.getElementsByTagName("input")[0]
+      let textarea = document.getElementsByTagName("textarea")[0]
+      let button = document.getElementsByTagName("button")
+      let stackValue = []
+
+      function addValue(e) {
+         let temp = input.value;
+         stackValue[stackValue.length] =temp ;
+         input.value = null;
+         textarea.value = stackValue
+      }
+
+
+      function RemoveValue(e) {
+         let temp = input.value;
+         stackValue.length = (stackValue.length - 1) ;
+         input.value = null;
+         textarea.value = stackValue
+      }
+
+      button[0].addEventListener("click", addValue )
+      button[1].addEventListener("click", RemoveValue )
+
+   </Script>
+</body>
+</html>

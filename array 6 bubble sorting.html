@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>bubble sort </title>
+</head>
+<body>
+   <div>
+      <input type="text" style="width: 400px;" readonly> 
+      <input type="text" style="width: 400px;" readonly>
+      <button>sort</button>
+   </div>
+   <Script> 
+   //bubble sort alogithm
+      let input = document.getElementsByTagName("input")
+      let button = document.getElementsByTagName("button")[0]
+      let arr1 = [77,88,99,5,8,9,11,22,33,6,7,44,55,66,1,2,3,4]
+      input[0].value = arr1
+      function short(e) {
+         for (let i = 0; i < arr1.length; i++) {
+            for (let j = 0; j < arr1.length; j++) {
+               if (arr1[j] > arr1[j+1]) {
+                  let temp = arr1[j+1];
+                  arr1[j+1] = arr1[j];
+                  arr1[j] = temp
+                  temp;
+               }
+               
+            }
+         }
+         input[1].value = arr1
+         console.log(arr1);
+      }
+
+
+       button.addEventListener("click", short)
+   </Script>
+</body>
+</html>

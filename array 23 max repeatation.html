@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>max repeatation</title>
+</head>
+<body>
+   <script>
+      let abc = "hello neeraj"
+      let obj ={}
+      let rep = " "
+      let temp;
+
+      for (let i = 0; i < abc.length; i++) {
+         temp = abc[i]
+         if (obj[temp]) {
+            obj[temp] += 1  
+         }else {
+           obj[temp] = 1
+         }
+          
+         if ( obj[temp] > obj[rep]) {
+            rep = temp
+            // console.log(rep);
+         } else {
+            console.log(obj);
+         }
+
+      }
+
+      console.log(rep);
+   </script>
+</body>
+</html>
